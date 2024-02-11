@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    position: relative;
+}
+
+
+.obj-width{
+    max-width: 1200px;
+    margin: auto;
+}
+
+nav{
+    background: #49c5b6;
+    box-shadow: 0 7px 10px rgb(34, 31, 31);
+}
+
+.navbar{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.3rem;
+
+    
+}
+.search-button{
+    padding: 0.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.search-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+#search-input{
+    padding: 1rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    color: rgb(34, 31, 31);
+}
+
+
+  #search-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    cursor: pointer;
+  }
+  
+  #search-button{
+    padding : 15px 32px;
+    font-size: large;
+    text-decoration: none;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    margin: 4px 12px;
+    background-color: #59e560;
+    color: rgb(34, 31, 31);
+    cursor: pointer;
+  }
+
+  #blog-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 3rem 0;
+    flex-wrap: wrap;
+  }
+
+
+  #blog-container :hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+
+  .blog-card{
+    width: 280px;
+    border: 1px solid #2d4c50;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 7px;
+    cursor: pointer;
+
+  }
+  .blog-card :hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+  .blog-card img{
+    width: 100%;
+    /* padding: 3%; */
+    border-radius: 10px;
+    height: 280px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+
+  .blog-card p{
+    font-size: 1.2rem;
+    padding-top: 0.7rem;
+  }
+
+  .blog-card h2{
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: #141414;
+  }
+
+  @media (max-width: 500px) {
+    nav {
+        padding: 0px 20px;
+    }
+
+    .navbar .new-icon{
+        padding: 1.6rem;
+    }
+
+    #search-input {
+        padding: 10px 10px;
+        width: 150px;
+        border: none;
+    }
+
+    .blog-card {
+        width: 100%;
+        
+    }
+
+  }
+  
