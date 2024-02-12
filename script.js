@@ -16,30 +16,30 @@ async function fetchRandomNews() {
     }
 }
 
-// searchButton.addEventListener("click" , async ()=> {
-//     const query = searchField.value.trim()
-//     if(query != ""){
-//         try{
-//             const articles = await fetchNewsQuery(query)
-//             displayBlog(articles)
-//         }catch{
-//             console.log("Error fetching news by query" , error)
-//         }
-//     }
-// // })
+searchButton.addEventListener("click" , async ()=> {
+    const query = searchField.value.trim()
+    if(query != ""){
+        try{
+            const articles = await fetchNewsQuery(query)
+            displayBlog(articles)
+        }catch{
+            console.log("Error fetching news by query" , error)
+        }
+    }
+// })
 
-// async function fetchNewsQuery(query){
-//     try {
-//         const apiUrl = `https://newsapi.org/v2/top-headlines?country=in&pageSize=10&apiKey=${apiKey}`;
-//         const response = await fetch(apiUrl);
-//         const data = await response.json();
-//         // console.log(data); // Log data here if needed
-//         return data.articles || []; // Ensure articles array is returned even if it's empty or undefined
-//     } catch(error) {
-//         console.error("Error fetching random news", error);
-//         return [];
-//     }
-// }
+async function fetchNewsQuery(query){
+    try {
+        const apiUrl = `https://newsapi.org/v2/top-headlines?country=in&pageSize=10&apiKey=${apiKey}`;
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        // console.log(data); // Log data here if needed
+        return data.articles || []; // Ensure articles array is returned even if it's empty or undefined
+    } catch(error) {
+        console.error("Error fetching random news", error);
+        return [];
+    }
+}
 
 function displayBlog(articles) {
     blogContainer.innerHTML = "";
