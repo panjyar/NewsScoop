@@ -26,7 +26,7 @@ searchButton.addEventListener("click" , async ()=> {
             console.log("Error fetching news by query" , error)
         }
     }
-// })
+ })
 
 async function fetchNewsQuery(query){
     try {
